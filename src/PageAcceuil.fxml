@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" prefHeight="400.0" prefWidth="640.0" >
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #48487F;" VBox.vgrow="ALWAYS">
+            <children>
+                <Button fx:id="buttonConsulterRdv" onMouseClicked="#ConsulterRdvButtonClicked" layoutX="111.0" layoutY="287.0" mnemonicParsing="false" style="-fx-background-color: #9E9EC5;" text="Consulter les Rdv" />
+                <Button fx:id="AjouterRdv"  onMouseClicked="#AjouterRdvbuttonClicked" layoutX="258.0" layoutY="287.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #9E9EC5;" text="Ajouter Rdv" />
+                <Button fx:id="AjouterPatient"  onMouseClicked="#AjouterPatientuttonClicked"  layoutX="413.0" layoutY="287.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #9E9EC5;" text="Ajouter Patient " />
+                <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="220.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fitHeight="274.0" fitWidth="385.0" layoutX="122.0" layoutY="16.0">
+                    <image>
+                        <Image url="@Img/3d9f1d4f-c85c-464c-8a54-7f6f3285bb63_200x200.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

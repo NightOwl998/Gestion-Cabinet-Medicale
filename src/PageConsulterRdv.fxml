@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox fx:controller="sample.ControllerConsulterRdv" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Acceuil">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #48487F;" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane style="-fx-background-color: #48487F;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="27.0" layoutY="200.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="La date de Rdv" textAlignment="CENTER" textFill="#eee9e9" wrapText="false">
+                            <font>
+                                <Font size="18.0" fx:id="x1" />
+                            </font>
+                        </Label>
+                        <VBox layoutX="7.0" layoutY="41.0" prefHeight="116.0" prefWidth="210.0">
+                            <children>
+                                <ImageView blendMode="SOFT_LIGHT" fitHeight="135.0" fitWidth="200.0">
+                                    <image>
+                                        <Image url="@Img/téléchargement.jpg" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </VBox>
+                        <TextFlow layoutX="11.0" layoutY="187.0" prefHeight="27.0" prefWidth="200.0" />
+                        <DatePicker fx:id="dateChosie" layoutX="23.0" layoutY="243.0" />
+                        <Button onAction="#ButtonConsulterClicked" layoutX="112.0" layoutY="295.0" mnemonicParsing="false" style="-fx-background-color: #9E9EC5;" text="Consulter" textFill="#fcf5f5" />
+                    </children>
+                </AnchorPane>
+                <ScrollPane prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: 0D9BAD;">
+                    <content>
+                        <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0" style="-fx-background-color: #9E9EC5;">
+                            <children>
+                                <VBox layoutX="-1.0" layoutY="1.0" prefHeight="547.0" prefWidth="435.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+                <AnchorPane style="-fx-background-color: #48487F;">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="10.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="80.0" fitWidth="81.0" layoutX="65.0" layoutY="28.0">
+                            <image>
+                                <Image url="@Img/customer-512.png" />
+                            </image>
+                        </ImageView>
+                        <Pane blendMode="SOFT_LIGHT" cache="true" cacheHint="QUALITY" layoutX="10.0" layoutY="131.0" prefHeight="395.0" prefWidth="200.0" style="-fx-background-color: #9E9EC5;">
+                            <children>
+                                <Label layoutX="21.0" layoutY="30.0" style="-fx-background-color: #9E9EC5;" text="Nom Patient">
+                                    <font>
+                                        <Font name="MV Boli" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="21.0" layoutY="76.0" style="-fx-background-color: #9E9EC5;" text="Prenom Patient">
+                                    <font>
+                                        <Font name="MV Boli" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="27.0" layoutY="130.0" prefHeight="36.0" prefWidth="138.0" style="-fx-background-color: #9E9EC5;" text="   Adresse" textAlignment="RIGHT">
+                                    <font>
+                                        <Font name="MV Boli" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="21.0" layoutY="177.0" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #9E9EC5;" text="  Telephone">
+                                    <font>
+                                        <Font name="MV Boli" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="25.0" layoutY="231.0" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #9E9EC5;" text="     Mail">
+                                    <font>
+                                        <Font name="MV Boli" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="4.0" layoutY="280.0" prefHeight="107.0" prefWidth="188.0" style="-fx-background-color: #9E9EC5;" text="Informations Medicales ">
+                                    <font>
+                                        <Font name="MV Boli" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" style="-fx-background-color: #48487F;" VBox.vgrow="NEVER">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3" />
+                    </font>
+                    <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+                    </textFill>
+                </Label>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>
